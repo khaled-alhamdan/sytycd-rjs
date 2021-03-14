@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const BookRow = () => {
+const BookRow = (props) => {
   const book = props.book;
-  const authors = book.authors.map(author => (
+  const authors = book.authors.map((author) => (
     <div key={author.id}>
       <Link to={`/authors/${author.id}`}>{author.name}</Link>
     </div>
